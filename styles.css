@@ -1,0 +1,23 @@
+body {
+ font-family: 'Barlow', cursive;
+ font-size: 2rem;
+ text-align: center;
+ background-color: rgba(56, 71, 79, 1);
+ color: lightyellow;
+}
+
+
+img {
+display: flex;
+flex-direction: column;
+margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: lightyellow;
+}
+
+a:hover {
+  color: yellow;
+}
