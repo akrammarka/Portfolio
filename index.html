@@ -7,18 +7,39 @@
   <meta charset="utf-8">
   <meta http-equiv=“X-UA-Compatible” content=“IE-edge”>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
 </head>
 
 <body>
+<canvas id="canvas-basic"></canvas>
+<script src="granim.min.js"></script>
+<script>
+var granimInstance = new Granim({
+   element: '#canvas-basic',
+   name: 'granim',
+   opacity: [1, 1],
+   states : {
+       "default-state": {
+           gradients: [
+               ['#834D9B', '#D04ED6'],
+               ['#1CD8D2', '#93EDC7']
+           ]
+       }
+   }
+});
+</script>
 
-  <h1>Akram Alsamarae</h1>
+<img class="logo" src="logo.PNG" alt="Akram">
+<div class= "hello"
+<h3> Coming Soon </h3>
+<p> Akram Alsamarae </p>
+</div>
 
-  <p>lets meet..</p>
+<!-- <a href="https://www.linkedin.com/in/akramalsamarae/">LinkedIn</a> -->
 
-<img src="akram.png" alt="Akram">
+<script src="script.js"></script>
 
-<a href="https://www.linkedin.com/in/akramalsamarae/">LinkedIn</a>
 </body>
 
 
