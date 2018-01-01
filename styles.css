@@ -1,28 +1,27 @@
-/* body {
- font-family: 'Muli', cursive;
- font-size: 2rem;
- text-align: center;
-   z-index: 3
-} */
 
 .logo {
-  height: 300px;
-  width: 300px;
-  z-index: 3;
+  height: 50px;
+  width: 50px;
+  z-index: 4;
   display: flex;
   align-items: center;
   margin: 0 auto;
-  margin-top: 20%;
+  display: block;
+  color: red;
+  left: 0;
+  position: absolute;
+  padding: -2px 2px;
+
   }
-  
-div {
+
+/* div {
   font-family: 'Muli', cursive;
   font-weight: lighter;
   display: flex;
   flex-direction: column;
   align-items: center;
    font-size: 1.2rem;
-}
+} */
 
 
 
@@ -37,4 +36,40 @@ div {
     bottom: 0;
     left: 0;
     z-index: -3;
+}
+
+
+ul {
+    font-family: 'Muli', cursive;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0.3rem;
+    background-color: #white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+
+}
+
+ul li {
+    float: right;
+    padding: 2px;
+    margin: 2px;
+    padding-right: 15px;
+}
+
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
