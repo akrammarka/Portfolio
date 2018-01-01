@@ -7,6 +7,13 @@
   <meta charset="utf-8">
   <meta http-equiv=“X-UA-Compatible” content=“IE-edge”>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="/highslide/highslide.js"></script>
+  <link rel="stylesheet" type="text/css" href="/highslide/highslide.css" />
+  <script type="text/javascript">
+      // override Highslide settings here
+      // instead of editing the highslide.js file
+      hs.graphicsDir = '/highslide/graphics/';
+  </script>
   <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
 
@@ -61,12 +68,21 @@ var granimInstance = new Granim({
 
   <div class="row">
     <div class="column">
-      <h2>Consulation</h2>
-      <p>Updated website </p>
+      <h2>Consultation</h2>
+      <p>Recently redesigned websites</p>
+      <p>   <a href="viper.png" class="highslide"
+                onclick="return hs.expand(this)">
+            <img src="viper.png" alt="Highslide JS"
+                title="Click to enlarge" height="120" width="107" /></a>
+      </p>
     </div>
     <div class="column" >
       <h2>Grand Circus Bootcamp Final Project</h2>
-      <p>Stressy (Stress Eating App) using react to determine </p>
+<p>Stressy, is a Stress Eating App that was designed using React to help you avoid stress
+eating at times of stress. Based on your stress level we can help you select from healthy
+recipes using the Edamam API. If you don't feel like cooking, we can also show food options nearby!
+</p>
+<a href="https://stressy.herokuapp.com/">Check it out</a>
     </div>
     <div class="column" >
       <h2>Column 3</h2>
