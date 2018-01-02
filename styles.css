@@ -128,3 +128,91 @@ align-items: center;
 .batt {
   width: 10%;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 410px) {
+
+
+
+  .banner {
+    height: 20%;
+    width: 100%;
+  }
+
+  .wrap {
+  margin-top: -50%;
+  margin-left: 8%;
+  width: 40%;
+  font-size: 7px;
+  }
+
+  ul li a {
+    text-decoration: none;
+}
+
+ul {
+    font-family: 'Muli', cursive;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0.3rem;
+    background-color: #white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    background-color: #59686F;
+
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  display: block;
+  color: red;
+  left: 0;
+  position: absolute;
+  padding: -2px 2px;
+  margin: -10px;
+  }
+
+  .aboutMe {
+    width: 80%;
+    margin-top: 55%;
+    margin-left: 10%;
+    font-family: 'Muli';
+  }
+
+  .first {
+    display: none;
+  }
+
+.imgCell {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+img.rollover {
+    width: 100%;
+    height: 100%;
+    border: 0px none;
+    display: inline-block;
+    position: relative;
+}
+
+.batt {
+  display: none;
+}
+
+.footer {
+  display: block;
+  color: grey;
+  margin-top: 10%;
+  font-family: "Muli"
+
+}
