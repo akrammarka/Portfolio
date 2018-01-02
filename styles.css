@@ -61,11 +61,11 @@ ul li {
 }
 
 
-.column {
+/* .column {
     float: left;
     width: 30%;
     padding: 10px;
-}
+} */
 
 /* Clear floats after the columns */
 .row:after {
@@ -73,3 +73,51 @@ ul li {
     display: table;
     clear: both;
 }
+
+
+td.imgCell {
+   /* a value greater than image height + paddings */
+    height: 50%;
+    text-align: center;
+}
+
+img.rollover {
+    display: inline-block;
+    position: relative;
+    padding: 4px;
+    width: 60%;
+    height: 30%;
+    background-color:#E8E8E8;
+    border: 0px none;
+}
+
+img.rollover:hover {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    margin-top: -24px;
+    margin-left: -24px;
+    z-index: 99;
+}
+
+.aboutMe {
+  width: 80%;
+  margin-top: 30%;
+  margin-left: 15%;
+  font-family: 'Muli';
+}
+
+.banner {
+  height: 50%;
+  width: 100%;
+}
+
+.wrap {
+margin-top: -42%;
+margin-left: 8%;
+width: 40%;
+}
+
+  .row {
+    margin-top: 50%;
+  }
