@@ -1,4 +1,5 @@
 
+
 .logo {
   height: 50px;
   width: 50px;
@@ -14,58 +15,7 @@
 
   }
 
-/* div {
-  font-family: 'Muli', cursive;
-  font-weight: lighter;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-   font-size: 1.2rem;
-} */
 
-
-
-#canvas-basic {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -3;
-}
-
-
-ul {
-    font-family: 'Muli', cursive;
-    font-weight: lighter;
-    margin: 0;
-    padding: 0.3rem;
-    background-color: #white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    list-style-type: none;
-
-}
-
-ul li {
-    float: right;
-    padding: 2px;
-    margin: 2px;
-    padding-right: 15px;
-}
-
-
-/* .column {
-    float: left;
-    width: 30%;
-    padding: 10px;
-} */
 
 /* Clear floats after the columns */
 .row:after {
@@ -92,7 +42,7 @@ img.rollover {
 }
 
 img.rollover:hover {
-    position: absolute;
+    position: relative;
     width: 80%;
     height: 50%;
     margin-top: -24px;
@@ -100,9 +50,35 @@ img.rollover:hover {
     z-index: 99;
 }
 
+ul {
+    font-family: 'Muli', cursive;
+    font-weight: lighter;
+    margin: 0;
+    padding: 0.3rem;
+    background-color: #white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+
+}
+
+ul li {
+    float: right;
+    padding: 2px;
+    margin: 2px;
+    padding-right: 15px;
+
+}
+
+ul li a {
+  text-decoration: none;
+}
+
 .aboutMe {
   width: 80%;
-  margin-top: 30%;
+  margin-top: 35%;
   margin-left: 15%;
   font-family: 'Muli';
 }
@@ -119,5 +95,36 @@ width: 40%;
 }
 
   .row {
-    margin-top: 50%;
+    margin-top: 12%;
+    margin-left: 15%;
+  font-family: 'Muli';
+    margin-right: 5%;
   }
+
+.column {
+align-items: center;
+  font-family: 'Muli';
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stressy {
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  height: 50%;
+}
+
+.footer {
+  margin-left: 15%;
+  margin-bottom: 5%;
+  color: grey;
+  margin-top: 10%;
+  font-family: "Muli"
+
+}
+
+.batt {
+  width: 10%;
+}
