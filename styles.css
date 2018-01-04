@@ -16,6 +16,12 @@
   }
 
 
+  canvas {
+    display:flex;
+    width: 30%;
+    height: 50%;
+
+  }
 
 /* Clear floats after the columns */
 .row:after {
@@ -86,12 +92,13 @@ ul li a {
 .banner {
   height: 50%;
   width: 100%;
+  font-family: 'Muli';
 }
 
 .wrap {
-margin-top: -42%;
-margin-left: 8%;
-width: 40%;
+margin-top: -49%;
+margin-left: 9%;
+width: 45%;
 }
 
   .row {
@@ -161,7 +168,7 @@ ul {
     left: 0;
     width: 100%;
     list-style-type: none;
-    background-color: #59686F;
+    /* background-color: #59686F; */
 
 }
 
@@ -182,13 +189,19 @@ ul {
 
   .aboutMe {
     width: 80%;
-    margin-top: 55%;
+    margin-top: 25%;
     margin-left: 10%;
     font-family: 'Muli';
   }
 
-  .first {
+  /* .first {
     display: none;
+  } */
+
+  .wrap {
+    margin: 0 auto;
+    width: 80%;
+    align-self: center;
   }
 
 .imgCell {
@@ -215,5 +228,12 @@ img.rollover {
   color: grey;
   margin-top: 10%;
   font-family: "Muli"
+
+}
+
+canvas {
+  display:flex;
+  width: 30%;
+  height: 50%;
 
 }
