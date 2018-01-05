@@ -237,3 +237,8 @@ canvas {
   height: 50%;
 
 }
+
+.column{
+margin-left: -20px;
+margin-right: 15px;
+}
