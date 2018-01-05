@@ -1,4 +1,7 @@
 
+
+
+
 window.sr = ScrollReveal({ reset: false });
 
 // Custom Settings
@@ -139,3 +142,17 @@ function coordsToI(x,y,w) {
 
 setInterval(loop,50);
 init();
+
+$(window).scroll(
+    {
+        previousTop: 0
+    },
+    function () {
+    var currentTop = $(window).scrollTop();
+    if (currentTop < this.previousTop) {
+        $(".navBar").show();
+    } else {
+        $(".navBar").hide();
+    }
+    this.previousTop = currentTop;
+});
