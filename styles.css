@@ -1,4 +1,7 @@
 
+.navBar{
+  background:rgba(1,1,1,1);
+}
 
 .logo {
   height: 50px;
@@ -15,13 +18,37 @@
 
   }
 
+  .navBar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+  }
+
+  .navBar a {
+  float: right;
+  display: block;
+
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+  padding-right: 20px;
+
+}
+div.first {
+  width: 70%;
+}
 
   canvas {
     display:flex;
-    width: 30%;
-    height: 50%;
+    width: 50%;
+    height: 70%;
+    margin-left: 40%;
 
   }
+
 
 /* Clear floats after the columns */
 .row:after {
@@ -56,7 +83,7 @@ img.rollover:hover {
     z-index: 99;
 }
 
-ul {
+/* ul {
     font-family: 'Muli', cursive;
     font-weight: lighter;
     margin: 0;
@@ -80,7 +107,7 @@ ul li {
 
 ul li a {
   text-decoration: none;
-}
+} */
 
 .aboutMe {
   width: 80%;
@@ -93,6 +120,7 @@ ul li a {
   height: 50%;
   width: 100%;
   font-family: 'Muli';
+  color: white;
 }
 
 .wrap {
@@ -193,9 +221,9 @@ ul {
     margin-left: 10%;
     font-family: 'Muli';
   }
-
-  /* .first {
-    display: none;
+/*
+  .first {
+    width: 10%;
   } */
 
   .wrap {
