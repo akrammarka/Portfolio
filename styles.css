@@ -42,9 +42,10 @@ div.first {
 
   font-family: 'Amatic SC', cursive;
   font-size: 80px;
-  margin-left: -13%;
-  width: 86%;
-  margin-top: 50%;
+  margin-left: 5%;
+  width: 36%;
+  margin-top: 34%;
+
 }
 
 
@@ -129,6 +130,12 @@ ul li a {
   margin-left: 3%;
 }
 
+.sideTitle{
+  font-size: 50px;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
 .aboutMe {
   width: 40%;
   margin-top: 8%;
@@ -162,6 +169,7 @@ display: flex;
     width: 60%;
     border-radius: 5px;
     margin-bottom: 4%;
+    margin-left: 5%;
 }
 
 .card:hover {
