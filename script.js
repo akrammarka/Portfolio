@@ -160,11 +160,11 @@
 $(document).ready(function(){
 	$(window).on("scroll",function(){
   	var wn = $(window).scrollTop();
-    if(wn > 120){
-    	$(".navBar").css("background","rgba(255,0,0,1)");
+    if(wn > 700){
+    	$(".navBar").css("background","rgb(56, 35, 35)");
     }
     else{
-    	$(".navBar").css("background","rgba(1,1,1,1)");
+    	$(".navBar").css("background","transparent");
     }
   });
 });
