@@ -15,6 +15,42 @@
 </head>
 
 
+<!-- navbar utlized for mobile version -->
+
+
+<!--    Made by Erik Terwan    -->
+<!--   24th of November 2015   -->
+<!--    All rights reserved    -->
+<nav class="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+
+    <!--
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a href="#home"><li>Home</li></a>
+      <a href="#aboutMe"><li>About Me</li></a>
+      <a href="#Projects"><li>Consultation & Projects</li></a>
+      <a href="#Contact"><li>Let's Talk</li></a>
+    </ul>
+  </div>
+</nav>
 
 <nav class="navBar">
   <div class="container-fluid">
@@ -31,7 +67,7 @@
 
 <body>
 
-  <!-- <img class="logo" src="logo.PNG" alt="Akram"> -->
+  <img class="logo" src="logo.PNG" alt="Akram">
 
 <!--
   <nav class= "navBar">
@@ -80,10 +116,8 @@
 
 
 <a name="Projects"></a>
-<div class="projectsTitle"> Recent Projects
+<div class="projectsTitle"> Recent Projects & Consultations
 </div>
-
-<h2>Consultations</h2>
 
 <div class="card">
   <img src="viper.png" alt="Viper" style="width:100%">
@@ -152,18 +186,18 @@
     </div>
   </div> -->
 
-  <div class="sideTitle"> Projects
-  </div>
+  <!-- <div class="sideTitle"> Projects
+  </div> -->
 
 
   <div class="card">
     <img src="stressy.png" alt="Stressy" style="width:100%">
       <h4><b>Stressy</b></h4>
-      <p>Stressy, is a Stress Eating App that was designed using React to help you avoid stress
-      eating at times of stress. Based on your stress level this app can help you select from healthy
-      recipes using the Edamam API. If you don't feel like cooking it can also show food options nearby using
+      <p>Stressy is a stress eating app that was designed using React to help you avoid stress
+      eating. By selecting your stress level, Stressy can help you select from healthy
+      recipes using the Edamam API. If you don't feel like cooking, it can also show food options nearby using
       Google's API!
-      This project was completed part of my final project for the Grand Circus Bootcamp
+      This project was completed part of my final project for the Grand Circus Bootcamp.
 
   </p>
   <p>
@@ -190,7 +224,8 @@ This project was completed part of my final project for the Grand Circus Bootcam
   <p>
     <img class="batt" src="batt.png" />
      Like what you see? Have questions? <a href= "akram@akramalsamarae.com"> akram@akramalsamarae.com</a>
-    or  <a href="https://www.linkedin.com/in/akramalsamarae/">LinkedIn</a>
+    or  <a href="https://www.linkedin.com/in/akramalsamarae/">LinkedIn</a>. Checkout my
+    Github <a href="https://www.github.com/akrammarka">here</a>
 
   </p>
 
