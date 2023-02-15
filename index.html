@@ -1,277 +1,473 @@
 <!DOCTYPE html>
-<html>
+<html  data-wf-page="AkramA"
+  data-wf-site="AkramA" lang="en">
 
 <head>
-  <title>Hello.</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <meta charset="utf-8">
-  <meta http-equiv=“X-UA-Compatible” content=“IE-edge”>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gloria+Hallelujah|Sirin+Stencil" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta charset="utf-8" />
+  <title>Akram Alsamarae · Web Developer, and Designer</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  
+  <link href="main.css"
+    rel="stylesheet" type="text/css" />
+  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
+ 
+  <!-- Text highlight colour -->
+  <style>
+    ::selection {
+      background: #F2FCE2;
+    }
+  </style>
+
+  <!-- Remove iOS input shadow -->
+  <style>
+    .subscribe-form-input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+  </style>
+ 
 </head>
 
-
-<!-- navbar utlized for mobile version -->
-
-
-<!--    Made by Erik Terwan    -->
-<!--   24th of November 2015   -->
-<!--    All rights reserved    -->
-<nav class="navigation">
-  <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-    <input type="checkbox" />
-
-    <!--
-    Some spans to act as a hamburger.
-
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-    <span></span>
-    <span></span>
-    <span></span>
-
-    <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-    <ul id="menu">
-      <a href="#home"><li>Home</li></a>
-      <a href="#aboutMe"><li>About Me</li></a>
-      <a href="#Projects"><li>Consultation & Projects</li></a>
-      <a href="#Contact"><li>Let's Talk</li></a>
-    </ul>
-  </div>
-</nav>
-
-<nav class="navBar">
-  <div class="container-fluid">
-    <div class="navbar-header">
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#aboutMe">About</a></li>
-      <li><a href="#Projects">Projects</a></li>
-      <li><a href="#Contact">Let's Talk</a></li>
-    </ul>
-  </div>
-</nav>
-
 <body>
+  <div
+    style="-webkit-transform:translate3d(0, -8rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -8rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -8rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -8rem, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+    class="page-wrapper">
+    <div class="global-styles w-embed">
+      <style>
+        /* Snippet gets rid of top margin on first element in any rich text*/
+        .w-richtext>:first-child {
+          margin-top: 0;
+        }
 
-  <img class="logo" src="logo.PNG" alt="Akram">
+        /* Snippet gets rid of bottom margin on last element in any rich text*/
+        .w-richtext>:last-child,
+        .w-richtext ol li:last-child,
+        .w-richtext ul li:last-child {
+          margin-bottom: 0;
+        }
 
-<!--
-  <nav class= "navBar">
+        /* Snippet makes all link elements listed below to inherit color from their parent */
+        a,
+        .w-tab-link,
+        .w-nav-link,
+        .w-dropdown-btn,
+        .w-dropdown-toggle,
+        .w-dropdown-link {
+          color: inherit;
+        }
 
-      <a href="#Contact">Let's Talk</a>
+        /* Snippet prevents all click and hover interaction with an element */
+        .clickable-off {
+          pointer-events: none;
+        }
 
+        /* Snippet enables all click and hover interaction with an element */
+        .clickable-on {
+          pointer-events: auto;
+        }
 
+        /* Snippet enables you to add class of div-square which creates and maintains a 1:1 dimension of a div.*/
+        .div-square::after {
+          content: "";
+          display: block;
+          padding-bottom: 100%;
+        }
 
-        <a href="#Projects">Projects</a>
-        <a href="#aboutMe">About</a>
-        <a href="index.html">Home</a>
-        <img class="logo" src="logo.PNG" alt="Akram">
+        /*Hide focus outline for main content element*/
+        main:focus-visible {
+          outline: -webkit-focus-ring-color auto 0px;
+        }
 
-    </nav> -->
+        /* Make sure containers never lose their center alignment*/
+        .container-medium,
+        .container-small,
+        .container-large {
+          margin-right: auto !important;
+          margin-left: auto !important;
+        }
 
+        /*Reset selects, buttons, and links styles*/
+        .w-input,
+        .w-select,
+        a {
+          color: inherit;
+          text-decoration: inherit;
+          font-size: inherit;
+        }
 
-<div class="banner">
-        <img class="banner" src="background3.jpeg" alt="banner" />
-        <div class="wrap">
-          <div class="first">
-              <h1>Let's work together to make something awesome <canvas id="myCanvas"></canvas> </h1>
+        /*Apply "..." after 3 lines of text */
+        .text-style-3lines {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
 
+        /*Apply "..." after 2 lines of text */
+        .text-style-2lines {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+
+        /*Apply "..." after 1 lines of text */
+        .text-style-1line {
+          display: -webkit-box;
+          overflow: hidden;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+        }
+
+        /*Remove blue focus on section anchor links */
+        .section:focus {
+          outline: none;
+        }
+      </style>
+    </div>
+    <div data-animation="over-left" class="section-nav is-multi-colored w-nav" data-easing2="ease" data-easing="ease"
+      data-collapse="small" data-w-id="69118560-d0bc-15fc-bbf8-b8fe5f6535b5" role="banner" data-duration="400"
+      data-doc-height="1">
+      <div class="page-padding">
+        <div class="nav-container"><a id="skip-link" href="#"
+            class="button-effect small is-skip-to-main w-node-c0d60ca7-58d9-7deb-b00e-9d256deab5b8-5f6535b5 w-inline-block">
+            <div class="z-1">Skip to content</div>
+            <div class="button-effect-wrapper">
+              <div class="button-effect-shine">Skip to content</div>
+            </div>
+          </a><a href="https://www.akramalsamarae.com/#home" role="navigation" aria-label="Logo" class="logo w-nav-brand">
+            <div class="logo-image w-embed"><svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg"
+                width="36" height="38" fill="none">
+                <path fill="currentColor"
+                  d="M 16.936 0 L 28.436 33.063 L 22.865 33.063 L 14.285 8.266 L 5.615 33.063 L 0 33.063 L 11.59 0 L 16.936 0 Z M 11.23 22.551 L 17.25 22.551 L 18.553 26.189 L 9.973 26.189 L 11.23 22.551 Z" />
+              </svg>
+            </div>
+          </a>
+          <nav role="navigation" class="nav-menu w-nav-menu">
+            <div class="logo-wrapper mobile-menu"><a href="https://www.akramalsamarae.com/#home" role="navigation"
+                aria-label="Logo" class="logo w-nav-brand">
+                <div class="logo-image w-embed"><svg aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg"
+                    width="36" height="38" fill="none">
+                    <path fill="currentColor"
+                      d="M32.3 8.2c2.7 2.7 3.6 5 3.7 7.1.2 2.5-.7 5.2-2.6 7.2a9.3 9.3 0 01-5.6 2.5 10 10 0 01-2.5 9.8c-2 2-4.7 3-7.4 3s-5.4-1-8.5-4.1L0 24.3 24 0l8.3 8.2zm-18.8 21c1.6 1.7 2.9 2.2 4.2 2 1 0 2.2-.4 3-1.2 1-1 1.4-2 1.4-3.1 0-1.2-.4-2.5-2-4.2L15.5 18 9 24.6l4.5 4.7zm6-15.3l3.3 3.3c1.4 1.4 2.4 1.9 3.4 1.8.9 0 1.8-.5 2.4-1 .7-.8 1-1.6 1-2.5 0-1-.3-2-1.7-3.4l-3.2-3.3-5.2 5.1z" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+            <div class="navigation-grid">
+              <a href="#work" class="navigation-link w-inline-block">
+                <h3 class="text-size-regular text-weight-medium">Work</h3>
+              </a>      
+              <a href="#about" class="navigation-link w-inline-block">
+                <h3 class="text-size-regular text-weight-medium">About</h3>
+              </a>
+              <a href="#contact" class="navigation-link w-inline-block">
+                <h3 class="text-size-regular text-weight-medium">Contact</h3>
+              </a>
+              <div class="social-links-wrapper">
+                <a aria-label="LinkedIn" href="https://www.linkedin.com/in/akramalsamarae/" class="navigation-link w-inline-block">
+                  <div class="icon-1x1 w-embed">
+                    <svg aria-hidden="true" role="img" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                      width="1.5rem" height="1.5rem" viewBox="0 0 24 24">
+                      <title>LinkedIn icon</title>
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </nav>
+          <div class="menu-button w-nav-button">
+            <div class="menu-icon">
+              <div class="menu-icon-line-top"></div>
+              <div class="menu-icon-line-middle">
+                <div class="menu-icon-line-middle-inner"></div>
+              </div>
+              <div class="menu-icon-line-bottom">
+
+              </div>
+            </div>
           </div>
         </div>
-
-  </div>
-
-<a name="aboutMe"></a>
-<div class="aboutTitle"> About Me
-</div>
-
-  <div class="aboutMe">
-    <p>
-    Hi there, thanks for stopping by! My name is Akram. I am a Developer who is  passionate about technology.
-    When I'm not coding, I enjoy hiking, biking, and baking (ask me about my banana pudding recipe!).
-    Check out some of my projects below, and
-    feel free to contact me with any questions.
-    </p>
-
-  </div>
-  <div class="me">
-    <img class="me" src="akrama4.jpg" alt="me" />
-
-  </div>
-
-<a name="Projects"></a>
-<div class="projectsTitle"> Recent Projects
-</div>
-
-<div class="card">
-  <img src="maestro.png" alt="Viper" style="width:100%">
-  <div class="container">
-    <h4><b>Maestro</b></h4>
-    <p>Built a prototype website on the ethereum blockchain
-
-</p>
-<p>
-   <a href="http://maestro.analog.earth">Maestro</a>
-</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="malafeef.png" alt="Viper" style="width:100%">
-  <div class="container">
-    <h4><b>Malafeef</b></h4>
-    <p>Created a mobile responsive wedding and special events website that showcases lots of images
-
-</p>
-<p>
-   <a href="https://www.Malafeef.com">Malafeef</a>
-</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="viper.png" alt="Viper" style="width:100%">
-  <div class="container">
-    <h4><b>Viper Networks</b></h4>
-    <p>Updated and modernized desktop view as well as created a mobile responsive interface
-
-</p>
-<p>
-   <a href="https://www.vipernetworks.com">Viper Networks</a>
-</p>
-  </div>
-</div>
-
-<div class="card">
-  <img src="apollo.png" alt="Apollo" style="width:100%">
-  <div class="container">
-    <h4><b>Apollo Smart Lights</b></h4>
-    <p>Updated and modernized desktop view as well as created a mobile responsive interface
-
-</p>
-<p>
-   <a href="https://www.apollosmartlights.com">Apollo Smart Lights</a>
-</p>
-  </div>
-</div>
-
-
-<!--
-  <div class="row">
-        <div class="consults">
-      <h3>Consultation</h3>
-      <h4> Viper Networks </h4>
-      <p>
-         Updated and modernized desktop view as well as created a mobile responsive
-         interface
-         <table>
-             <tr>
-                 <td class="imgCell">
-                     <a href="www.vipernetworks.com">
-                         <img class="rollover" src="viper.png" />
-                     </a>
-                 </td>
-             </tr>
-
-         </table>
-      </p>
-
-
-
-      <h4> Apollo Smart Lights </h4>
-      <p>
-         Updated and modernized the website in desktop view as well as created a mobile responsive
-         interface
-         <table>
-             <tr>
-                 <td class="imgCell">
-                     <a href="www.apollosmartlights.com">
-                         <img class="rollover" src="apollo.png" />
-                     </a>
-                 </td>
-             </tr>
-
-         </table>
-      </p>
-    </div>
-  </div> -->
-
-  <!-- <div class="sideTitle"> Projects
-  </div> -->
-
-
-  <div class="card">
-    <img src="stressy.png" alt="Stressy" style="width:100%">
-      <h4><b>Stressy</b></h4>
-      <p>Stressy is a stress eating app that was designed using React to help you avoid stress
-      eating. By selecting your stress level, Stressy can help you select from healthy
-      recipes using the Edamam API. If you don't feel like cooking, it can also show food options nearby using
-      Google's API!
-      This project was completed part of my final project for the Grand Circus Bootcamp.
-
-  </p>
-  <p>
-     <a href="https://stressy.herokuapp.com/">Check it out!</a>
-  </p>
-    </div>
-
-    <div class="card">
-      <img src="gateway.png" alt="Gateway" style="width:100%">
-        <h4><b>Gateway Pharmacy</b></h4>
-        <p>WayRx.com is a website created for Gateway Pharmacy in Detroit. It has a clean interface that is
-          mobile responsive and includes pertinent information for patients.
-
-    </p>
-    <p>
-       <a href="https://www.wayrx.com/">Gatway Pharmacy</a>
-    </p>
       </div>
-  </div>
-    <!-- <div class="column" >
-      <h3>Stressy</h3>
-<p>Stressy, is a Stress Eating App that was designed using React to help you avoid stress
-eating at times of stress. Based on your stress level this app can help you select from healthy
-recipes using the Edamam API. If you don't feel like cooking it can also show food options nearby using
-Google's API!
-This project was completed part of my final project for the Grand Circus Bootcamp
-</p>
-<a href="https://stressy.herokuapp.com/">Check it out</a>
- <img class="stressy" src="stressy.png" />
     </div>
+    <main id="main" class="main-wrapper">
+      <header id="home" class="section-header is-multi-colored">
+        <div class="page-padding">
+          <div style="opacity:0" class="container-large">
+            <div class="layout-12-column">
+              <h1 id="w-node-_50457d26-3dd1-d039-6b91-26c2f032d599-8d2531d0"
+                style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX() rotateY(0) rotateZ(0) skew(10deg, 6deg);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(30deg, 6deg);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);opacity:0"
+                class="heading-xlarge"><svg style="transform: scale3d(1.5, 1.5, 1.5)" width="8rem" height="8rem"  viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#000"  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m18.6575 19.2409c-.9683-1.6927-3.1256-2.2799-4.8183-1.3115s-2.2799 3.1256-1.3115 4.8183c.1552.2714.3458.5209.5667.742l11.5324 15.0998 2.6883 3.3878-7.8906-10.3314c-.9683-1.6927-3.1256-2.2799-4.8183-1.3115s-2.2799 3.1256-1.3115 4.8183c.1552.2714.3458.5209.5667.7421l7.8906 10.3312 6.2707 7.899c5.467 6.2731 14.5147 5.9306 20.7863.465 3.6045-3.1684 5.9226-7.5482 6.5154-12.3105.3858-4.2326.807-15.301.807-15.301-.1826-2.6008-3.1353-4.5234-3.5158-3.1802l-4.8939 9.7575-3.3657-4.2224 3.3657 4.2224-3.3657-4.2224-13.4651-17.2086c-.9683-1.6927-3.1256-2.2799-4.8183-1.3115s-2.2799 3.1256-1.3115 4.8183c.1552.2714.3458.5209.5667.742l4.2488 5.5631 6.4234 8.48-13.419-17.6801c-.9683-1.6927-3.1256-2.2799-4.8183-1.3115s-2.2799 3.1256-1.3116 4.8183c.1552.2714.3458.5209.5667.7421l14.6716 19.0145"/><g stroke-miterlimit="10"><path d="m11.6726 42.8719c0 2.5663 1.747 4.6428 3.9059 4.6428"/><path d="m7.0614 42.4369c0 5.5959 3.8094 10.1241 8.5171 10.1241"/><path d="m45.2619 21.2377c0-2.5663-1.747-4.6428-3.9059-4.6428"/><path d="m49.8731 21.6727c0-5.5959-3.8094-10.1241-8.5171-10.1241"/></g></g></svg>
+                 I'm Akram,<br />designer & web developer </h1>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section class="section with-divider">
+        <div class="page-padding">
+          <div style="opacity:0" class="container-large">
+            <div class="layout-12-column">
+              <div id="w-node-a95b2831-2b6f-c134-dcd4-e94e0cada7a8-8d2531d0" class="content-wrapper">
+                <p class="text-size-large">Frontend web developer and engineer with a passion for design.</p>
+                <p class="text-size-large margin-0">Currently a web developer at <a
+                    href="https://www.zingermans.com/" class="text-style-link">Zingerman's</a>. Previously, lead web3 developer with <a
+                    href="https://www.analog.earth/" class="text-style-link">Analog Labs.</a> 
+                  Before that, senior support advisor at <a href="https://apple.com/" class="text-style-link">Apple</a>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="work" class="section with-divider">
+        <div class="page-padding">
+          <div style="opacity:0" class="container-large">
+            <div style="width:0%;height:100%" class="section-title">
+              <div class="margin-bottom margin-huge">
+                <h2>Recent Work</h2>
+              </div>
+            </div>
+    
+            <div class="work-collection_wrapper w-dyn-list">
+              <div role="list" class="work-collection_list w-dyn-items">
+                <div id="w-node-ea708192-d447-9c2f-21f5-950cf0f7d99c-8d2531d0" role="listitem"
+                  class="work-collection-item w-dyn-item"><a href="www.zingermans.com"
+                    class="project-thumbnail-link w-inline-block">
+                    <div class="project-thumbnail-image-wrapper"><img
+                        src="/Users/akram/Desktop/portfolio/Portfolio/work/zingheader.png"
+                        loading="lazy" alt="Zingermans website" class="project-thumbnail-image" /></div>
+                    <div class="project-title-div">
+                      <h3 class="heading-small">Zingerman's</h3>
+                      <div class="heading-small"> →</div>
+                    </div>
+                    <div class="project-title-div margin-0">
+                      <h4 class="heading-small text-weight-regular">Gourmet e-commerce shop
+                        for food lovers</h4>
+                    </div>
+                  </a></div>
+                <div id="w-node-ea708192-d447-9c2f-21f5-950cf0f7d99c-8d2531d0" role="listitem"
+                  class="work-collection-item w-dyn-item"><a href="/Users/akram/Desktop/portfolio/Portfolio/work/maestro.html"
+                    class="project-thumbnail-link w-inline-block">
+                    <div class="project-thumbnail-image-wrapper"><img
+                        src="/Users/akram/Desktop/portfolio/Portfolio/work/maestroheader.png"
+                        alt="Maestro website"
+                         class="project-thumbnail-image" /></div>
+                    <div class="project-title-div">
+                      <h3 class="heading-small">Maestro</h3>
+                      <div class="heading-small"> →</div>
+                    </div>
+                    <div class="project-title-div margin-0">
+                      <h4 class="heading-small text-weight-regular">Supply chain built on the ethereum blockchain</h4>
+                    </div>
+                  </a></div>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="about" class="section with-divider">
+        <div class="page-padding">
+          <div style="opacity:0" class="container-large">
+            <div class="layout-12-column">
+              <div id="w-node-_070bf091-02e1-222f-3e11-a889150ce5af-8d2531d0" style="width:0%;height:100%"
+                class="section-title">
+                <h2>About</h2>
+              </div>
+              <div id="w-node-_070bf091-02e1-222f-3e11-a889150ce5b2-8d2531d0" class="content-wrapper">
+                <p class="text-size-large margin-0">I’m Akram — a web developer, designer, and support specialist. I care a lot about using design for positive impact.
+          </p>
+              </div>  
+              <div id="w-node-_070bf091-02e1-222f-3e11-a889150ce5b5-8d2531d0" class="content-wrapper">
+                <p>I am currently a web developer at <a href="https://www.zingermans.com/"
+                    class="text-style-link">Zingerman's</a>, a gourmet food shop. I build new features and maintain the website and internal tools when unprecended demand (doubling of business) during the covid-19 pandemic.  Before that I
+                  was a lead developer at Maestro <a href="https://analog.earth/Maestro" class="text-style-link">Meastro</a> — a SBIR funded company to develop a supply chain using web3.
+                I led design and implementation of a supply chain website built on the Ethereum blockchain.</p>
+                <p>Before Maestro — I was the senior technical support advisior at, <a href="https://Apple.com/"
+                    class="text-style-link">Apple</a>. I was a top performer, consistently ranked in the "Top 5%" among a cohort of over 1000 Apple Advisors. 
+                    Managed a high volume of customer interactions independently and as part of the AppleCare team, consistently 
+                    prioritizing and efficiently navigating technical environments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section with-divider">
+        <div class="page-padding">
+          <div style="opacity:0" class="container-large">
+            <div class="layout-12-column">
+              <div id="w-node-_5b931a6c-c811-8665-1c3a-692638b3b897-8d2531d0" class="sticky-title-wrapper">
+                <div class="section-title is-offset">
+                  <h2>Experience</h2>
+                </div>
+              </div>
+              <div id="w-node-_5b931a6c-c811-8665-1c3a-692638b3b89b-8d2531d0" class="content-wrapper">
+                <article class="list-item is-first">
+                  <div class="padding-bottom padding-small">
+                    <h3>Zingerman's</h3>
+                    <h3 class="text-weight-regular">Web Developer</h3>
+                  </div>
+                  <p class="text-size-medium margin-0">January 2019–current</p>
+                </article>
+                <article class="list-item">
+                  <div class="padding-bottom padding-small">
+                    <h3>Blue Cross Blue Shield</h3>
+                    <h3 class="text-weight-regular">Intern</h3>
+                  </div>
+                  <p class="text-size-medium margin-0">2019</p>
+                </article>
+                <article class="list-item">
+                  <div class="padding-bottom padding-small">
+                    <h3>Maestro</h3>
+                    <h3 class="text-weight-regular">Lead Web Developer</h3>
+                  </div>
+                  <p class="text-size-medium margin-0">October 2019–June 2020</p>
+                </article>
+                <article class="list-item">
+                  <div class="padding-bottom padding-small">
+                    <h3>Apple</h3>
+                    <h3 class="text-weight-regular">Senior Technical Advisor</h3>
+                  </div>
+                  <p class="text-size-medium margin-0">September 2015–August 2017</p>
+                </article>                   
+              </div>         
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section with-divider">
+        <div class="page-padding">
+          <div style="opacity:0" class="container-large">
+            <div class="layout-12-column">
+              <div id="w-node-_9bb4c80b-2e01-bdee-cb33-f9cda0006d26-8d2531d0" style="width:0%;height:100%"
+                class="section-title">
+                <h2>Skills</h2>
+              </div>
+              <article id="w-node-_9bb4c80b-2e01-bdee-cb33-f9cda0006d29-8d2531d0" class="content-wrapper">
+                <article class="list-item is-first">
+                  <h3
+                    style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);opacity:0"
+                    class="heading-xlarge">Front End Web Development</h3>
+                </article>
+                <article class="list-item">
+                  <h3
+                    style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);opacity:0"
+                    class="heading-xlarge">User experience design</h3>
+                </article>
+                <article class="list-item">
+                  <h3
+                    style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);opacity:0"
+                    class="heading-xlarge">Technical Support</h3>
+                </article>
+                <article class="list-item is-last">
+                  <h3
+                    style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);opacity:0"
+                    class="heading-xlarge">Building in MVC</h3>
+                </article>
+                <article class="list-item is-last">
+                  <h3
+                    style="-webkit-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);-moz-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);-ms-transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);transform:translate3d(0, 0, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(10deg, 6deg);opacity:0"
+                    class="heading-xlarge">UI/UX design</h3>
+                </article>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+      <section id="contact" class="section with-divider">
+        <div class="page-padding">
+          <div style="opacity:0" class="container-large">
+            <div class="layout-12-column">
+              <div id="w-node-_17457359-3127-e018-2d4c-43de2f27dfc7-8d2531d0" style="width:0%;height:100%"
+                class="section-title">
+                <h2>Get in touch</h2>
+              </div>
+      
+              <div id="w-node-_17457359-3127-e018-2d4c-43de2f27dfcd-8d2531d0" class="content-wrapper">
+                <p>If you want to chat — email me at <a
+                    href="mailto:akramalsamarae@gmail.com"
+                    class="text-style-link">akramalsamarae@gmail.com</a>.</p>         
+              </div>       
+            </div>
+          </div>
+        </div>
+      </section>    
+   
+    </main>
+    <footer class="section-footer is-multi-colored">
+      
+              <div class="footer_row">
+                <div id="w-node-bd178905-9fb1-961d-4eba-f3e3b4790213-1d954aa0"
+                  class="text-size-small text-color-grey margin-0">©2023 Akram Alsamarae</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+  <script src="main.js"
+    type="text/javascript"></script>
+  <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  <!-- Email popup cookie -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      if (!Cookies.get('alert')) {
+        setTimeout(function () {
+          $('.pop-up_wrapper').css('display', 'flex');
+          Cookies.set('alert', true, { expires: 1 });
+        }, 7000);
+      }
+    });
+    document.body.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') {
+        document.querySelector('.pop-up_close').click();
+      }
+    });
+// Documentation at https://github.com/js-cookie/js-cookie
+  </script>
 
-  </div> -->
+  <!-- Remove anchor link hashes from URL -->
+ 
+  <script defer>
+    var Webflow = Webflow || [];
+    Webflow.push(function () {
+      $('a').click(function () {
+        setTimeout(function () {
+          history.replaceState(null, null, ' ');
+        }, 0);
+      });
+    });
+  </script>
 
-<a name="Contact"></a>
-<div class="footer">
-  <p>
-    <img class="batt" src="batt.png" />
-     Like what you see? Have questions? <a href= "mailto:akram@engnious.com"> akram@engnious.com</a>
-    or  <a href="https://www.linkedin.com/in/akramalsamarae/">LinkedIn</a>.
+  <!-- Skip-to-main content script -->
+  <script>
+    $(document).ready(function () {
+      $('#skip-link').on('click keydown', function (e) {
+        if (e.type === "keydown" && e.which !== 13) {
+          return;
+        }
 
-  </p>
-
-</div>
-
-
-
-<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-<script src="script.js"></script>
-
+        e.preventDefault();
+        var target = $('#main');
+        target.attr('tabindex', '-1');
+        target.focus();
+      });
+    });
+  </script>
 </body>
-
 
 </html>
