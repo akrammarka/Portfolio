@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPod Click Wheel Interface</title>
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const ClickWheel = () => {
+            // ... [previous state declarations remain the same]
+            const [selectedSource, setSelectedSource] = React.useState(null);
+            const [volume, setVolume] = React.useState(50);
+            const [isVolumeMode, setIsVolumeMode] = React.useState(false);
+            const [wheelRotation, setWheelRotation] = React.useState(0);
+            const wheelRef = React.useRef(null);
+            const [isDragging, setIsDragging] = React.useState(false);
+            const [startAngle, setStartAngle] = React.useState(0);
+            
+            const audioSources = [
+                'Spotify',
+                'Apple Music',
+                'Local Files',
+                'Radio'
+            ];
+
+            // ... [all your existing functions remain the same]
+            const calculateAngle = (event, element) => {
+                const rect = element.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                return Math.atan2(event.clientY - centerY, event.clientX - centerX) * 180 / Math.PI;
+            };
+
+            const handleWheelMouseDown = (event) => {
+                setIsDragging(true);
+                const currentAngle = calculateAngle(event, wheelRef.current);
+                
+                if (isVolumeMode) {
+                    setStartAngle(currentAngle - (volume * 360 / 100));
+                } else {
+                    setStartAngle(currentAngle - wheelRotation);
+                }
+            };
+
+            const handleWheelMouseMove = (event) => {
+                if (!isDragging) return;
+                
+                const currentAngle = calculateAngle(event, wheelRef.current);
+                
+                if (isVolumeMode) {
+                    let newAngle = currentAngle - startAngle;
+                    newAngle = ((newAngle % 360) + 360) % 360;
+                    const newVolume = Math.round((newAngle / 360) * 100);
+                    setVolume(Math.max(0, Math.min(100, newVolume)));
+                    setWheelRotation(newAngle);
+                } else {
+                    let newRotation = currentAngle - startAngle;
+                    newRotation = ((newRotation % 360) + 360) % 360;
+                    setWheelRotation(newRotation);
+                    
+                    const sourceIndex = Math.floor((newRotation / 360) * audioSources.length);
+                    setSelectedSource(audioSources[sourceIndex]);
+                }
+            };
+
+            const handleWheelMouseUp = () => {
+                setIsDragging(false);
+            };
+
+            const handleCenterClick = () => {
+                if (selectedSource) {
+                    if (!isVolumeMode) {
+                        setWheelRotation(volume * 360 / 100);
+                    } else {
+                        setWheelRotation((audioSources.indexOf(selectedSource) / audioSources.length) * 360);
+                    }
+                    setIsVolumeMode(prev => !prev);
+                }
+            };
+
+            React.useEffect(() => {
+                document.addEventListener('mouseup', handleWheelMouseUp);
+                document.addEventListener('mousemove', handleWheelMouseMove);
+                
+                return () => {
+                    document.removeEventListener('mouseup', handleWheelMouseUp);
+                    document.removeEventListener('mousemove', handleWheelMouseMove);
+                };
+            }, [isDragging, startAngle, isVolumeMode]);
+
+            return (
+                <div className="min-h-screen bg-gray-50">
+                    {/* Header Section */}
+                    <header className="bg-white shadow-sm">
+                        <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+                            <div className="flex items-center justify-between">
+                                <h1 className="text-2xl font-bold text-gray-900">
+                                    iPod Click Wheel Interface
+                                </h1>
+                                <a
+                                    href="../portfolio.html"
+                                    className="px-4 py-2 bg-gray-100 text-gray-700 rounded-md hover:bg-gray-200 transition-colors"
+                                >
+                                    ← Back to Portfolio
+                                </a>
+                            </div>
+                        </div>
+                    </header>
+
+                    {/* Description Section */}
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                        <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
+                            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+                                About This Project
+                            </h2>
+                            <p className="text-gray-600 mb-4">
+                                This interface recreates the iconic iPod click wheel experience using React. 
+                                It demonstrates interactive UI development with rotation tracking and 
+                                state management.
+                            </p>
+                            <div className="bg-blue-50 border-l-4 border-blue-400 p-4">
+                                <p className="text-blue-700">
+                                    <strong>How to use:</strong>
+                                </p>
+                                <ol className="list-decimal ml-5 text-blue-600 space-y-2">
+                                    <li>Click and drag the outer wheel to select an audio source</li>
+                                    <li>Press the center button to confirm your selection</li>
+                                    <li>Once confirmed, rotate the wheel again to adjust volume</li>
+                                    <li>Press the center button again to go back to source selection</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Original Click Wheel Interface */}
+                    <div className="flex flex-col items-center justify-center space-y-8 p-8 select-none">
+                        <div className="text-xl font-semibold mb-4">
+                            {isVolumeMode ? `Volume: ${volume}%` : (selectedSource || 'Select Source')}
+                        </div>
+                        
+                        <div className="relative w-64 h-64">
+                            {/* Outer wheel */}
+                            <div
+                                ref={wheelRef}
+                                onMouseDown={handleWheelMouseDown}
+                                className="absolute inset-0 bg-gray-200 rounded-full cursor-pointer"
+                                style={{
+                                    transform: `rotate(${wheelRotation}deg)`,
+                                    transition: isDragging ? 'none' : 'transform 0.2s ease-out'
+                                }}
+                            >
+                                {/* Wheel texture markers */}
+                                {[...Array(12)].map((_, i) => (
+                                    <div
+                                        key={i}
+                                        className="absolute w-1 h-4 bg-gray-300"
+                                        style={{
+                                            left: '50%',
+                                            top: '0',
+                                            transformOrigin: '50% 32px',
+                                            transform: `translateX(-50%) rotate(${i * 30}deg)`
+                                        }}
+                                    />
+                                ))}
+                            </div>
+                            
+                            {/* Center button */}
+                            <div
+                                onClick={handleCenterClick}
+                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white rounded-full cursor-pointer hover:bg-gray-100 flex items-center justify-center shadow-md"
+                            >
+                                {isVolumeMode ? '🔊' : 'Enter'}
+                            </div>
+                        </div>
+
+                        {/* Source list */}
+                        <div className="mt-8 text-left w-48">
+                            {audioSources.map((source, index) => (
+                                <div
+                                    key={source}
+                                    className={`p-2 ${selectedSource === source ? 'bg-blue-500 text-white' : 'bg-gray-100'} 
+                                            mb-2 rounded`}
+                                >
+                                    {source}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        // Render the app
+        ReactDOM.render(
+            <ClickWheel />,
+            document.getElementById('root')
+        );
+    </script>
+    
+    <!-- Babel for JSX transformation -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</body>
+</html>

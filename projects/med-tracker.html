@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medication Tracker Widget</title>
+  <style>
+    /* Import custom font from Google */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .tracker-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 25px;
+      border-radius: 16px;
+      width: 350px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 1s ease-out;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #333;
+      letter-spacing: 1px;
+    }
+    .med-form input, .med-form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 16px;
+    }
+    .med-form input {
+      background: #f7f7f7;
+      transition: box-shadow 0.3s ease;
+    }
+    .med-form input:focus {
+      box-shadow: 0 0 8px rgba(102, 126, 234, 0.8);
+    }
+    .med-form button {
+      background: linear-gradient(45deg, #667eea, #764ba2);
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .med-form button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 5px 15px rgba(102, 126, 234, 0.5);
+    }
+    .med-list {
+      list-style: none;
+      padding: 0;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    .med-item {
+      background: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+    .med-item:hover {
+      transform: translateX(5px);
+    }
+    .med-item span {
+      flex: 1;
+      margin-right: 10px;
+      color: #555;
+    }
+    .med-item button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    .med-item button:hover {
+      color: #764ba2;
+    }
+  </style>
+</head>
+<body>
+  <div class="tracker-container">
+    <h2>Medication Tracker</h2>
+    <form class="med-form">
+      <input type="text" id="medName" placeholder="Medication Name" required />
+      <input type="text" id="medDosage" placeholder="Dosage (e.g., 500mg)" required />
+      <input type="text" id="medFrequency" placeholder="Frequency (e.g., 2x daily)" required />
+      <button type="submit">Add Medication</button>
+    </form>
+    <ul class="med-list" id="medList"></ul>
+  </div>
+
+  <script>
+    const medForm = document.querySelector('.med-form');
+    const medList = document.getElementById('medList');
+    let medications = JSON.parse(localStorage.getItem('medications')) || [];
+
+    function renderMedications() {
+      medList.innerHTML = '';
+      medications.forEach((med, index) => {
+        const li = document.createElement('li');
+        li.className = 'med-item';
+        li.innerHTML = `
+          <span><strong>${med.name}</strong> - ${med.dosage} - ${med.frequency}</span>
+          <button onclick="editMed(${index})">Edit</button>
+          <button onclick="deleteMed(${index})">Delete</button>
+        `;
+        medList.appendChild(li);
+      });
+    }
+
+    function saveMedications() {
+      localStorage.setItem('medications', JSON.stringify(medications));
+    }
+
+    medForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('medName').value;
+      const dosage = document.getElementById('medDosage').value;
+      const frequency = document.getElementById('medFrequency').value;
+
+      medications.push({ name, dosage, frequency });
+      saveMedications();
+      renderMedications();
+      medForm.reset();
+    });
+
+    window.editMed = function(index) {
+      const med = medications[index];
+      const newName = prompt("Edit Medication Name:", med.name);
+      const newDosage = prompt("Edit Dosage:", med.dosage);
+      const newFrequency = prompt("Edit Frequency:", med.frequency);
+      if(newName && newDosage && newFrequency) {
+        medications[index] = { name: newName, dosage: newDosage, frequency: newFrequency };
+        saveMedications();
+        renderMedications();
+      }
+    }
+
+    window.deleteMed = function(index) {
+      if(confirm("Are you sure you want to delete this medication?")) {
+        medications.splice(index, 1);
+        saveMedications();
+        renderMedications();
+      }
+    }
+
+    // Initial render on page load
+    renderMedications();
+    
+  </script>
+</body>
+</html>

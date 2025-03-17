@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Password Protection Screen -->
+    <div id="password-screen" class="min-h-screen flex items-center justify-center">
+        <div class="max-w-md w-full space-y-8 p-8 bg-white rounded-lg shadow-md m-4">
+            <div>
+                <h2 class="text-center text-3xl font-extrabold text-gray-900">
+                    Protected Portfolio
+                </h2>
+                <p class="mt-2 text-center text-sm text-gray-600">
+                    Please enter the password to view the portfolio
+                </p>
+            </div>
+            <form id="password-form" class="mt-8 space-y-6">
+                <div>
+                    <label for="password" class="sr-only">Password</label>
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                        placeholder="Enter password"
+                    />
+                </div>
+                <div id="error-message" class="text-red-600 text-sm hidden">
+                    Incorrect password
+                </div>
+                <button
+                    type="submit"
+                    class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                    Enter
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Portfolio Content (Initially Hidden) -->
+    <div id="portfolio-content" class="hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h1 class="text-3xl font-bold text-gray-900 mb-8">My Portfolio</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Maestro Project -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-2">
+                            Maestro 
+                        </h2>
+                        <p class="text-gray-600 mb-4">
+                            A project to build a 3D printed bike using distributed manufacturing traceable on the blockchain
+                        </p>
+                        <a
+                            href="MaestroCode/index.html"
+                            class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                        >
+                            View Project
+                        </a>
+                    </div>
+                </div>   
+                
+                <!-- Med tracker Project -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-2">
+                            Medication Tracker 
+                        </h2>
+                        <p class="text-gray-600 mb-4">
+                            Med tracker with goal setting
+                        </p>
+                        <a
+                            href="projects/med-tracker.html"
+                            class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                        >
+                            View Project
+                        </a>
+                    </div>
+                </div>     
+
+                  <!-- iPod Interface Project -->
+                  <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-2">
+                            Music Source Interface
+                        </h2>
+                        <p class="text-gray-600 mb-4">
+                            Interactive iPod-style click wheel interface 
+                        </p>
+                        <a
+                            href="projects/ipod-interface.html"
+                            class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                        >
+                            View Project
+                        </a>
+                    </div>
+                </div>
+                <!-- Sunrise Project -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-900 mb-2">
+                            Sunrise Tracker 
+                        </h2>
+                        <p class="text-gray-600 mb-4">
+                            Sunrise and sunset tracker
+                        </p>
+                        <a
+                            href="projects/sunrise-sunset.html"
+                            class="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+                        >
+                            View Project
+                        </a>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Password protection logic
+        const PASSWORD = 'R2'; 
+        
+        document.getElementById('password-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const passwordInput = document.getElementById('password');
+            const errorMessage = document.getElementById('error-message');
+            
+            if (passwordInput.value === PASSWORD) {
+                // Store authentication in sessionStorage
+                sessionStorage.setItem('portfolio-authenticated', 'true');
+                
+                // Show portfolio content
+                document.getElementById('password-screen').classList.add('hidden');
+                document.getElementById('portfolio-content').classList.remove('hidden');
+                
+                // Clear password field
+                passwordInput.value = '';
+                errorMessage.classList.add('hidden');
+            } else {
+                // Show error message
+                errorMessage.classList.remove('hidden');
+                passwordInput.value = '';
+            }
+        });
+
+        // Check if already authenticated
+        window.addEventListener('load', function() {
+            if (sessionStorage.getItem('portfolio-authenticated') === 'true') {
+                document.getElementById('password-screen').classList.add('hidden');
+                document.getElementById('portfolio-content').classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
