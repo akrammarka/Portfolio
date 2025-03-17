@@ -1,0 +1,337 @@
+
+h1{
+  font-family: 'moderatregular';
+  font-size: 32px;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+h2 {
+  font-family: 'moderatregular';
+  text-transform: uppercase;
+}
+
+ h3 {
+   font-family: 'moderatregular';
+   text-transform: uppercase;
+   padding-top: 3%;
+ }
+
+.div-toggle{
+  margin-left: 10%;
+  font-family: 'moderatregular';
+  font-size: 14px;
+}
+/* .my-info-1{
+
+    float: left;
+    width: 39%;
+    padding: 10px;
+    height: 250px;
+    margin-left: 5%;
+  } */
+
+
+#getProductInfoForm{
+  margin-top: 3%;
+}
+
+#blockNumber{
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+
+
+.my-info-1{
+  margin-left: 10%;
+  font-family: 'moderatregular';
+}
+
+.overlay{
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 200%;
+  background-color: #373737;
+  transition: 2s opacity;
+  z-index:-1;
+  display:flex;
+  text-transform: uppercase;
+  font-family: 'moderatregular';
+  font-size: 25px;
+}
+.on{
+  opacity: 1;
+  z-index:2;
+}
+
+.close-button{
+   margin:auto;
+   font-family: 'moderatregular';
+   font-size: 25px;
+   text-transform: uppercase;
+   text-decoration: none;
+   color: pink;
+
+}
+
+.overlayText{
+  color: white;
+  margin: auto;
+  margin-top: 25%;
+}
+
+.textboxIntro {
+	font-size: 40px;
+	margin-left: 5%;
+  margin-right: 10%;
+ flex-basis: 50%;
+ object-fit: cover;
+ background: #FAF096;
+ font-family: 'moderatregular';
+ padding-bottom: 5%;
+ margin-top: 5%;
+}
+
+.textboxHowToGetWorking {
+	font-size: 40px;
+	margin-left: 5%;
+  margin-right: 10%;
+ flex-basis: 50%;
+ object-fit: cover;
+ background: #F5A0D7;
+ font-family: 'moderatregular';
+ padding-bottom: 5%;
+ margin-top: 5%;
+ color: black;
+}
+
+body{
+  margin-bottom: 5%;
+  font-family: 'moderatregular';
+}
+
+/* Create two equal columns that floats next to each other */
+.customizationText1 {
+  float: left;
+  width: 39%;
+  padding: 10px;
+  height: 250px;
+  margin-left: 5%;
+}
+
+.customizationText3{
+  float: left;
+  width: 39%;
+  padding: 10px;
+  height: 250px;
+  margin-left: 5%;
+  margin-top: 15%;
+}
+
+.customizationText2{
+  float: left;
+  width: 39%;
+  padding: 10px;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  margin-top: 8%;
+
+}
+/* Clear floats after the columns */
+.areYouConnected:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin-top: 5%;
+}
+
+.productAndOrderDivs{
+margin-top: 5%;
+}
+.connectedText{
+  font-family: 'moderatregular';
+text-transform: uppercase;
+padding-top: 3%;
+font-size: 40px;
+margin-left: 5%;
+}
+
+.whatPrintingDoes{
+  font-size: 40px;
+  margin-left: 5%;
+  margin-right: 10%;
+ flex-basis: 50%;
+ object-fit: cover;
+ background: #000000;
+ font-family: 'moderatregular';
+ padding-bottom: 5%;
+ margin-top: 5%;
+ color: white;
+}
+
+input[type=text] {
+  width: 80%;
+padding: 12px 20px;
+margin: 8px 0;
+box-sizing: border-box;
+background-color: transparent;
+color: #F5A0D7;
+outline: none;
+outline-style: none;
+border-top: none;
+border-left: none;
+border-right: none;
+border-bottom: solid black 1.5px;
+padding: 3px 10px;
+font-size: 26px;
+}
+}
+
+input[type=email] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: transparent;
+   color: #F5A0D7;
+   outline: none;
+   outline-style: none;
+   border-top: none;
+   border-left: none;
+   border-right: none;
+   border-bottom: solid black 1.5px;
+   padding: 3px 10px;
+   font-size: 40px;
+
+}
+
+.submitPrintForm{
+  font-family: 'moderatregular';
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    margin-left: 5%;
+    border-style: solid;
+    transition-duration: 0.4s;
+    border-width: 2px;
+    font-weight: lighter;
+    margin-left: 40%;
+
+margin-top: 5%;
+
+}
+
+
+.submitPrintForm:hover {
+  background-color: #272727;
+color: #fff;
+
+}
+
+
+.submitFormButton{
+  font-family: 'moderatregular';
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    margin-left: 5%;
+    border-color:  #e7e7e7;
+    color: black;
+    border-style: solid;
+    margin-left: 22%;
+    margin-top: 5%;
+
+}
+
+
+.submitFormButton:hover {
+  background: #e7e7e7;
+}
+
+.howToUse{
+  width: 50%;
+  margin-top: 3%;
+margin-left: 25%;
+}
+
+.mobileMessage{
+  display: none;
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media only screen and (max-device-width: 850px) and (min-device-width: 320px)
+{
+.textboxIntro, .textboxHowToGetWorking {
+      font-size: 28px;
+          width: 90%;
+    }
+
+    ul {
+margin-left: -14%;
+ }
+
+ input[type=text] {
+    font-size: 28px;
+    width: 100%;
+ }
+
+ input[type=email] {
+    font-size: 28px;
+    width: 100%;
+ }
+
+ .submitPrintForm {
+     font-size: 30px;
+     margin-left: 30%;
+
+ }
+
+
+.whatPrintingDoes
+{
+  width: 90%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .customizationText1 {
+      width: 85%;
+
+  }
+
+.mobileMessage{
+  display: block;
+}
+
+.nonMobile{
+  display: none;
+}
+
+.connectedText{
+  display: none;
+}
+
+.areYouConnected{
+  display: none;
+}
+
+.customizationText2{
+  width: 85%;
+
+}
+
+.productAndOrderDivs{
+  display: none;
+}

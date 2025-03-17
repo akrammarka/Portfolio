@@ -1,0 +1,21 @@
+{
+  "name": "test1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "await-transaction-mined": "^1.0.12",
+    "etherscan-api": "^10.0.5",
+    "https-localhost": "^4.4.1",
+    "https-server": "^0.1.2",
+    "start-server-and-test": "^1.10.6",
+    "web3": "^1.2.6",
+    "web3-eth": "^1.2.4"
+  }
+}
